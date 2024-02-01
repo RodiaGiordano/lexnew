@@ -7,7 +7,7 @@ $user_id = $_GET['id'];
 
 
 
-    $sql = "SELECT users.id, CONCAT(users.name, ' ', users.last_name) AS full_name, users.c_f, users.tax_rate, receipts.id, receipts.date, receipts.amount FROM users JOIN receipts ON users.id = receipts.user_id WHERE users.id = $user_id";
+    $sql = "SELECT users.id, CONCAT(users.name, ' ', users.last_name) AS full_name, users.c_f, receipts.tax_rate, receipts.id, receipts.date, receipts.amount FROM users JOIN receipts ON users.id = receipts.user_id WHERE users.id = $user_id";
     $result = $conn->query($sql);
     
     $result = $conn->query($sql);
@@ -16,9 +16,7 @@ $user_id = $_GET['id'];
 
                 $data[] = $row;
             }
-        // if($result->num_rows > 0){
-        //     $data = $result->fetch_assoc();
-            
+        
         }else{
             $error = "nessun risultato";
         }

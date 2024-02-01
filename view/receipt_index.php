@@ -55,10 +55,3 @@ require_once __DIR__ . '/../model/receipt.php'
 </body>
 
 </html>
-<!-- <?php  
-            // foreach($data as $ele => $value){
-                // if($ele !== 'id' && $ele !== 'full_name'){
-                    // echo "<li class='list-group-item'><strong>$ele</strong> : $value</li>";
-                // }
-            // }
-                ?> -->

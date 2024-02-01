@@ -31,28 +31,31 @@ require_once __DIR__ . '/../model/user.php'
             </div>
             <button type="submit">cerca</button>
         </form>
-
-        <?php if(isset($data)){
-
-            foreach($data as $ele){
-                echo "<div class='card mt-5'>
-                <div class='card-body'>
-                <h2>
-                <a href='./receipt_index.php?" . http_build_query(['id' => $ele['id']]) . "'>
-                " . $ele['name'] . " " . $ele['last_name'] . "
+        <!-- modifica -->
+        <?php if(isset($data)) :  ?>
+        <?php foreach($data as $ele) : ?>
+        <div class='card mt-5'>
+            <div class='card-body d-flex gap-5'>
+                <h2><?= "{$ele['name']}  {$ele['last_name']}"?></h2>
+                <a class="btn btn-primary" href='./receipt_index.php?<?= http_build_query(['id' => $ele['id']]) ?>'>
+                    Visualizza le ricevute
                 </a>
-                </h2>
-                </div>
-                </div>";
-            }
-        } else{
-            echo "<div class='alert alert-danger mt-5'>
-                      $error
-                      </div>";
-                    }
-                ?>
+                <a class="btn btn-primary" href='./receipt_form.php?<?= http_build_query(['id' => $ele['id']]) ?>'>
+                    Aggiungi ricevuta
+                </a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+        <?php else : ?>
+        <div class='alert alert-danger mt-5'>
+            <?= $error ?>
+        </div>
+        <?php endif;?>
 
-    </div>
+
+
+
+
     </div>
 </body>
 

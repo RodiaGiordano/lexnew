@@ -7,9 +7,9 @@ $sql = "CREATE TABLE users(
     last_name VARCHAR(30) NOT NULL,
     date_birth DATE NOT NULL,
     place_birth VARCHAR(20) NOT NULL,
-    c_f VARCHAR(16) NOT NULL,
-    tax_rate DECIMAL(3,2) NOT NULL
-)";
+    c_f VARCHAR(16) NOT NULL
+    
+);";
 
 if($conn->query($sql) === true){
     echo "tabella creata con successo";
