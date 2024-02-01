@@ -55,8 +55,10 @@ $user_id = $_GET['id'];
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Aggiungi ricevuta</button>
             </div>
-
         </form>
+
+        <a href="../index.php" class="btn btn-success mt-3">Torna alla ricerca</a>
+
 
     </div>
 </body>

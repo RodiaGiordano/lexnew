@@ -19,7 +19,7 @@
 
                 <div class="form-floating">
                     <input type="text" name="name" class="form-control" id="floatingInputGroup1"
-                        placeholder="Nominativo">
+                        placeholder="Nominativo" required>
                     <label for="floatingInputGroup1" id="floatingInputGroup1">Nominativo</label>
                 </div>
             </div>
